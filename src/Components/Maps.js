@@ -3,8 +3,6 @@ import ReactMapboxGl, { Marker, Popup } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { XIcon } from "@heroicons/react/solid";
 
-// import MapboxWorker from "worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker";
-
 const Maps = ({ coordinates }) => {
   const [popup, setPopup] = useState(null);
 
