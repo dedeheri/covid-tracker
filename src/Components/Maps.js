@@ -11,7 +11,7 @@ const Maps = ({ coordinates }) => {
   const [popup, setPopup] = useState(null);
 
   const Map = ReactMapboxGl({
-    accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN,
+    accessToken: "process.env.REACT_APP_MAPBOX_ACCESS_TOKEN",
   });
   return (
     <Map
