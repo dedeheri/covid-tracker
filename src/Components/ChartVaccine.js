@@ -119,7 +119,7 @@ const ChartVaccine = ({ countrie }) => {
   }
 
   return (
-    <div className="border mt-6 border-[#404040] px-4 py-3 md:px-10 md:py-5 rounded-xl">
+    <div className="border border-[#404040] mt-4 px-4 py-3 md:px-10 md:py-5 rounded-xl">
       <h1 className="text-2xl mb-2">Vaksinasi</h1>
       <Filter days={days} day={day} setDay={setDay} />
       <Line data={data} options={options} />

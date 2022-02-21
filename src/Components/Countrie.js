@@ -13,7 +13,7 @@ const Countrie = ({ data, loading }) => {
   }
 
   return (
-    <div className="flex flex-col border border-[#404040] rounded-xl p-5 h-80 md:h-[40rem]">
+    <div className="flex flex-col border border-[#404040] rounded-xl p-5 h-80  md:h-[40rem]">
       <h1 className="font-medium text-[#ADADAD] mb-4">
         Kasus bersadarkan negara
       </h1>

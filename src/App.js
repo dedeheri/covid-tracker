@@ -9,6 +9,7 @@ import { getCountries } from "./redux/action/getCountries";
 import Container from "./Components/Container";
 import Countrie from "./Components/Countrie";
 import Grid from "./Components/Grid";
+import Fotter from "./Components/Fotter";
 import Chart from "./Components/Chart";
 import {
   REMOVE_DATA_BY_HISTORY,
@@ -17,8 +18,7 @@ import {
 } from "./redux/action-type";
 import ChartVaccine from "./Components/ChartVaccine";
 import News from "./Components/News";
-import ChartRecovered from "./Components/ChartRecovered";
-import ChartDeaths from "./Components/ChartDeaths";
+import Grid2 from "./Components/Grid2";
 
 function App() {
   const [countrie, setCountrie] = useState({
@@ -68,16 +68,13 @@ function App() {
           <Countrie loading={loadingCountrie} data={countries} />
         </Grid>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 md:-mt-80">
-          <div className="col-span-2">
-            <Chart countrie={countrie} />
-            <ChartRecovered countrie={countrie} />
-            <ChartDeaths countrie={countrie} />
-            <ChartVaccine countrie={countrie} />
-            <News />
-          </div>
-        </div>
+        <Grid2>
+          <Chart countrie={countrie} />
+          <ChartVaccine countrie={countrie} />
+          <News />
+        </Grid2>
       </Container>
+      <Fotter />
     </>
   );
 }

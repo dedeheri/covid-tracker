@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+
 import ReactMapboxGl, { Marker, Popup } from "react-mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker";
+
 import { XIcon } from "@heroicons/react/solid";
+ReactMapboxGl.workerClass = MapboxWorker;
 
 const Maps = ({ coordinates }) => {
   const [popup, setPopup] = useState(null);
 
   const Map = ReactMapboxGl({
-    accessToken:
-      "pk.eyJ1IjoibXVubmlyciIsImEiOiJja3pyOWp5MzIwZjY5Mndwa2t2M3A2aTJuIn0.0B4hTROHzD4yuyZDKrixDg",
+    accessToken: process.env.REACT_APP_MAPBOX_ACCESS_TOKEN,
   });
   return (
     <Map

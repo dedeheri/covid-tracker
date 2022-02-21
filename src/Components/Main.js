@@ -16,8 +16,8 @@ export const Main = ({
   children,
 }) => {
   return (
-    <div className="col-span-2 ">
-      <div className="h-80 border border-[#404040] px-4 py-3 md:px-10 md:py-5 rounded-xl w-auto">
+    <div className="col-span-2 space-y-5">
+      <div className="border border-[#404040] px-4 py-3 md:px-10 md:py-5 rounded-xl w-auto">
         <div className="flex space-x-3 ">
           <h1 className="mt-3">Lokasi </h1>
           <Listbox value={countrie} onChange={setCountrie}>
@@ -85,7 +85,7 @@ export const Main = ({
 
         <div className="space-y-1 mt-10 ">
           <h1 className="font-base text-[#ADADAD]">Total Kasus</h1>
-          <div className="text-2xl md:text-3xl font-semibold">
+          <div className="text-lg sm:text-xl md:text-3xl font-semibold">
             {loading ? (
               <LoadingText />
             ) : (
@@ -98,7 +98,7 @@ export const Main = ({
         <div className="flex justify-between  mt-5 ">
           <div className="space-y-1">
             <h1 className="font-base text-[#ADADAD]">Terkonfirmasi</h1>
-            <div className="text-2xl md:text-3xl font-semibold">
+            <div className="text-lg sm:text-xl md:text-3xl font-semibold">
               {loading ? (
                 <LoadingText />
               ) : (
@@ -111,7 +111,7 @@ export const Main = ({
 
           <div className="space-y-1">
             <h1 className="font-base text-[#ADADAD]">Sembuh</h1>
-            <div className="text-2xl md:text-3xl font-semibold">
+            <div className="text-lg sm:text-xl md:text-3xl font-semibold">
               {loading ? (
                 <LoadingText />
               ) : (
@@ -124,7 +124,7 @@ export const Main = ({
 
           <div className="space-y-1">
             <h1 className="font-base text-[#ADADAD]">Meninggal</h1>
-            <div className="text-2xl md:text-3xl font-semibold">
+            <div className="text-lg md:text-3xl font-semibold">
               {loading ? (
                 <LoadingText />
               ) : (
@@ -144,6 +144,7 @@ export const Main = ({
           </h1>
         </div>
       </div>
+      {children}
     </div>
   );
 };

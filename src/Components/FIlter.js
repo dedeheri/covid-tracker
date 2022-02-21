@@ -31,7 +31,7 @@ const Filter = ({ day, setDay, days }) => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-[#404040] divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute right-0 w-40 md:w-52 mt-1 origin-top-right bg-[#404040] divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div className="px-1 py-1 ">
                 {Object.entries(days).map(([k, v], i) => (
                   <Menu.Item key={i}>
