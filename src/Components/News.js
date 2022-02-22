@@ -78,18 +78,18 @@ const News = () => {
       )}
 
       <div className="flex justify-end">
-        {news.length + 1 > 10 ? (
+        {news.length > 10 ? (
           <button
-            onClick={() => setPageSizePlus(pageSizePlus - 5)}
+            onClick={() => setPageSizePlus(pageSizePlus - 10)}
             className="transition duration-200 hover:bg-[#2F3033] rounded-lg p-2 text-md cursor-pointer font-semibold"
           >
             Tampilkan Sedikit
           </button>
         ) : null}
 
-        {news.length + 1 < 100 ? (
+        {news.length < 100 ? (
           <button
-            onClick={() => setPageSizePlus(pageSizePlus + 5)}
+            onClick={() => setPageSizePlus(pageSizePlus + 10)}
             className="transition duration-200 hover:bg-[#2F3033] rounded-lg p-2 text-md cursor-pointer font-semibold"
           >
             Tampilkan lainya

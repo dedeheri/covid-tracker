@@ -1,27 +1,12 @@
 import React, { useState } from "react";
 
-// import ReactMapboxGl, { Feature, Layer, Marker, Popup } from "react-mapbox-gl";
+import Map, { Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import MapboxWorker from "mapbox-gl/dist/mapbox-gl-csp-worker";
-
-import Map, {
-  Marker,
-  Popup,
-  NavigationControl,
-  FullscreenControl,
-  ScaleControl,
-  GeolocateControl,
-} from "react-map-gl";
 
 import { XIcon } from "@heroicons/react/solid";
-// ReactMapboxGl.workerClass = MapboxWorker;
 
 const Maps = ({ coordinates }) => {
   const [popup, setPopup] = useState(false);
-  const [popups, setPopups] = useState({});
-
-  console.log(popup);
-
   const mapConfig = {
     longitude: 106.526,
     latitude: 0.026,
